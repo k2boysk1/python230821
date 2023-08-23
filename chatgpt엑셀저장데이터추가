@@ -1,0 +1,25 @@
+from openpyxl.utils import coordinate_from_string
+
+# 엑셀 파일 열기
+wb = load_workbook('C:\\work\\sales.xlsx')
+ws = wb.active
+
+# 마지막 행 번호 구하기
+last_row_num = ws.max_row
+
+# 추가할 데이터 생성
+sample_data = [
+    ("샘플 제품1", 50000, 5, datetime(2023, 8, 1)),
+    ("샘플 제품2", 80000, 3, datetime(2023, 8, 15))
+]
+
+# 데이터 추가
+for data in sample_data:
+    last_row_num += 1
+    for col_idx, value in enumerate(data, start=1):
+        col_letter = get_column_letter(col_idx)
+        ws[f"{col_letter}{last_row_num}"] = value
+
+# 엑셀 파일 저장
+wb.save('C:\\work\\sales.xlsx')
+print("샘플 데이터가 추가되었습니다.")

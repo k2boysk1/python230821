@@ -1,0 +1,33 @@
+from openpyxl import Workbook
+from openpyxl.utils import get_column_letter
+from random import randint
+from datetime import datetime, timedelta
+
+# 엑셀 파일 생성
+wb = Workbook()
+ws = wb.active
+
+# 열 제목 추가
+column_titles = ["제품명", "가격", "수량", "판매날짜"]
+for col_idx, title in enumerate(column_titles, start=1):
+    col_letter = get_column_letter(col_idx)
+    ws[f"{col_letter}1"] = title
+
+# 랜덤 데이터 생성 및 쓰기
+for row in range(2, 102):  # 2번째 행부터 101번째 행까지
+    product_name = f"제품{row - 1}"
+    price = randint(10000, 100000)  # 가격 범위 설정
+    quantity = randint(1, 10)       # 수량 범위 설정
+
+    # 판매날짜 생성 (현재 날짜로부터 1년 이내의 랜덤한 날짜)
+    current_date = datetime.now()
+    sale_date = current_date - timedelta(days=randint(1, 365))
+
+    ws[f"A{row}"] = product_name
+    ws[f"B{row}"] = price
+    ws[f"C{row}"] = quantity
+    ws[f"D{row}"] = sale_date
+
+# 엑셀 파일 저장
+wb.save('C:\\work\\sales.xlsx')
+print("데이터가 저장되었습니다.")
