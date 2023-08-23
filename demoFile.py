@@ -9,11 +9,11 @@ f.close
 f = open("c:\\work\demo2.txt", encoding="utf-8")
 result = f.read()
 print(result)
-print("-----reading-----")
+print("\n-----reading-----")
 f.seek(0)
 print(f.readline(), end="")
 print(f.readline(), end="")
-print("-----reading()--------")
+print("\n-----reading()--------")
 f.seek(0)
 lst = f.readlines()
 for item in lst:
