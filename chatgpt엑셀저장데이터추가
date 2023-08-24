@@ -23,3 +23,4 @@ for data in sample_data:
 # 엑셀 파일 저장
 wb.save('C:\\work\\sales.xlsx')
 print("샘플 데이터가 추가되었습니다.")
+
