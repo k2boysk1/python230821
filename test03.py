@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup 
+
 html = '''
 <html>
     <head>
@@ -48,8 +49,12 @@ soup = BeautifulSoup(html, 'html.parser')
 
 # #이때 맥북프로를 제외하고 맥북에어만 찾기 위해 맥북에어가 포함된 
 # #부모 태그 정보를 추가한다. 
-tags_notebook1 = soup.select('#notebook1 > span.name')
+# tags_notebook1 = soup.select('#notebook1 > span.name')
+# print(tags_notebook1) 
+
+tags_notebook1 = soup.select('p > span.name')
 print(tags_notebook1) 
+
 
 # #태그 위치로 위치 찾기2 
 # #결과는 동일하지만 첫번째 코드는 상위태그1(div.sale)

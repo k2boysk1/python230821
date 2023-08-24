@@ -1,22 +1,20 @@
-# demoFile.py
-
-f = open("c:\\work\demo2.txt", "wt", encoding="utf-8")
+# demoFile.py 
+f = open("c:\\work\\demo2.txt", "wt", encoding="utf-8")
 f.write("데이터1번\n데이터2번\n데이터3번\n")
-f.close
+f.close() 
 
-
-#읽기
-f = open("c:\\work\demo2.txt", encoding="utf-8")
+#읽기 
+f = open("c:\\work\\demo2.txt", encoding="utf-8")
 result = f.read()
 print(result)
-print("\n-----reading-----")
+print("---readline()---")
 f.seek(0)
 print(f.readline(), end="")
 print(f.readline(), end="")
-print("\n-----reading()--------")
+print("---readlines()---")
 f.seek(0)
 lst = f.readlines()
 for item in lst:
-    print(item)
+    print(item, end="")
 
-f.close()
+f.close() 

@@ -1,9 +1,8 @@
-#정규 표현식(특정한 패턴)
+#정규표현식(특정한 패턴)
 import re 
 
 #원본 로그파일
 f=open('c:\\work\\PV3.txt','rt')
-
 #복사본 로그파일
 g=open('c:\\work\\PV3_copy.txt','wt',encoding='utf-8')
 

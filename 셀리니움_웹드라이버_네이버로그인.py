@@ -8,6 +8,7 @@ from selenium.webdriver.common.by import By
 import clipboard
 import time
 
+#코드 수정 
 driver = webdriver.Chrome()
 driver.get('https://nid.naver.com/nidlogin.login')
 
@@ -29,6 +30,5 @@ time.sleep(1)
 # 로그인 버튼 클릭
 driver.find_element(By.XPATH,'//*[@id="log.login"]').click()
 
-#창닫힘 방지
 while True:
     pass 

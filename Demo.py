@@ -1,2 +1,3 @@
-#DemoStrList.py
-print("hello VS code")
+# Demo.py 
+print("Hello VS Code")
+

@@ -1,6 +1,6 @@
-hRst = 2 error 100 : 에러가 발생했음
+hRst = 2 error 100:에러가 발생했음
 
-hRst = 2 error 200 : 에러가 발생했음
+error 100:에러가 발생했음
 
-hRst = 2 error 300 : 에러가 발생했음
+error 100:에러가 발생했음
 
