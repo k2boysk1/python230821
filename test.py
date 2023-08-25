@@ -1,1 +1,2 @@
-import pandas as pd
+import pandas
+plot(arange(10))
